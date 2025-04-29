@@ -1,109 +1,87 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 .container {
-    background-color: beige;
-    display: grid;
-    grid-template-columns: repeat(16, 1fr);
-    grid-template-rows: repeat(16, 1fr);
-    height: 100vh;
-    border: 1px solid black;
-    gap: 5px;
-  }
+  background-color: beige;
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+}
 
 .calculadoraCuerpo {
-    grid-column: 1/5;
-    grid-row: 2/8;
-    background-color: black;
-    width: 400px;
-    height: auto;
+    background-color: rgb(0, 0, 0);
+    color: antiquewhite;
     display: grid;
-    gap: 10px;
-    padding: 10px;
-  }
-
-.boton{
-    background-color: gray;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    grid-template-columns: repeat(4,1fr);
+    gap: .5rem;
+    width: 350px;
+    max-width: 100%;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    aspect-ratio: 1/1;
 }
-
-
 .displayCalculadora{
+    color: antiquewhite;
     grid-column: 1/5;
-    grid-row: 2/3;
-    background-color: yellowgreen;
+    padding: 3rem;
+    font-size: xxx-large;
+    font-weight: 700;
+    border-radius: 10px;
+} 
+
+.btn{
+  border: none;
+  background-color: rgb(53, 53, 53);
+  color: antiquewhite;
+  border-radius: 50%;
+  font-size: x-large;
+  font-weight: 500;
+  cursor: pointer;
+  transition:  0,3 ease;
+  transform: 0,3s ease;
+  padding: 1.5rem .5rem;
+}
+.btn:hover{
+  background-color: gray;
+  transform: scale(0.95);
 }
 
-#botonIgual{
-    grid-area: 7/4/8/5;
-}
-#botonCero{
-    grid-area: 7/1/8/3;
-}
-#botonDecimal{
-    grid-area: 7/3/8/4;
-}
-#botonUno{
-    grid-area: 6/1/7/2;
-}
-#botonDos{
-    grid-area: 6/2/7/3;
-}
-#botonTres{
-    grid-area: 6/3/7/4;
-}
-#botonDividir{
-    grid-area: 6/4/7/5;
-}
-#botonCuatro{
-    grid-area: 5/1/6/2;
-}
-#botonCinco{
-    grid-area: 5/2/6/3;
-}
-#botonSeis{
-    grid-area: 5/3/6/4;
-}
-#botonMultiplicar{
-    grid-area: 5/4/6/5;
-}
-#botonSiete{
-    grid-area: 4/1/5/2;
-}
-#botonOcho{
-    grid-area: 4/2/5/3;
-}
-#botonNueve{
-    grid-area: 4/3/5/4;
-}
-#botonRestar{
-    grid-area: 4/4/5/5;
-}
 #botonLimpiar{
-    grid-area: 3/1/4/2;
+  grid-area: 2/1/3/3;
+  border-radius: 50px;
 }
 #botonEliminar{
-    grid-area: 3/2/4/3;
-}
-#botonPorcentaje{
-    grid-area: 3/3/4/4;
-}
-#botonSumar{
-    grid-area: 3/4/4/5;
+  grid-column: 3/4;
 }
 
-.btn {
-    width: 50%;
-    aspect-ratio: 1/1;
-    border-radius: 50%;
-    border: none;
-    cursor: pointer;
+#btnDividir, #btnMultiplicar, #btnRestar, #btnSumar, #btnIgual{
+  grid-column: 4/5;
+  background-color: rgb(224, 122, 5);
+  transform: scale(0.95);
 }
+#btnDividir:hover,
+#btnMultiplicar:hover,
+#btnRestar:hover,
+#btnSumar:hover,
+#btnIgual:hover{
+  background-color: rgba(255, 184, 78, 0.959);
 
-.btn:hover {
-    background-color: #2980b9;
+}
+#btnSiete, #btnOcho, #btnNueve{
+  grid-row: 3/4;
+}
+#btnCuatro, #btnCinco, #btnSeis{
+  grid-row: 4/5;
+}
+#btnUno, #btnDos, #btnTres{
+  grid-row: 5/6;
+}
+#btnComa{
+  grid-area: 6/1/7/2;
+}
+#btnCero{
+  grid-area: 6/2/7/4;
+  border-radius: 50px;
 }
