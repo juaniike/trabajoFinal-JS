@@ -20,8 +20,9 @@ botones.forEach(boton => {
         }
 
         if(boton.id === "btnIgual") {
-            try{
-                pantalla.textContent = eval(pantalla.textContent)
+            try {
+                const expresion = pantalla.textContent.replaceAll(",", ".")
+                pantalla.textContent = eval(expresion).toString().replace(".", ",")
             } catch {
                 pantalla.textContent = "Match Error"
             }
@@ -33,7 +34,5 @@ botones.forEach(boton => {
         } else {
             pantalla.textContent += botonApretado
         }
-
     })
-    
-});
+})
