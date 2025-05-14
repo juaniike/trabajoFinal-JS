@@ -1,0 +1,107 @@
+/* Reset de estilos para eliminar márgenes y padding por defecto */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Contenedor principal con estructura de grid */
+body {
+    display: grid;
+    background-color: rgb(255, 255, 220);
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.5fr 3fr 0.5fr;
+    height: 100vh;
+    font-weight: 900;
+    /* Texto en negrita */
+}
+
+/*Contenedores*/
+
+/* Estilos del header */
+#primero {
+    display: grid;
+    place-items: center;
+    background-color: rgb(163, 163, 163);
+    grid-area: 1/1/2/3;
+}
+
+/* Sección izquierda */
+#segundo {
+    display: grid;
+    place-items: center;
+    grid-area: 2/1/3/2;
+}
+
+button {
+    font-size: large;
+    padding: 15px 40px;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid black;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+button:hover {
+    border: 1px solid black;
+    background-color: rgb(0, 48, 87);
+    color: white;
+    transform: scale(1.2);
+}
+
+
+/* Sección derecha */
+#tercero {
+    display: grid;
+    place-items: center;
+    grid-area: 2/2/3/3;
+}
+
+/* Estilos del footer */
+#cuarto {
+    display: grid;
+    place-content: center;
+    background-color: rgb(0, 48, 87);
+    grid-row: auto;
+    grid-column: 1/4;
+}
+
+/* Estilos del header */
+
+/* Navegación */
+header .nav-link li {
+    list-style: none;
+    display: inline-block;
+    padding: 0 20px;
+}
+
+header .nav-link li:hover {
+    transform: scale(0.9);
+}
+
+header .nav-link a {
+    font-size: xx-large;
+    color: #ffffff;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+header .nav-link li a:hover {
+    color: #000000;
+}
+
+/*Fin Header*/
+
+/*Overlay*/
+
+/*Comienzo del Footer*/
+
+footer .footer-content {
+    color: white;
+    text-align: center;
+    padding-top: 15px;
+    font-weight: bold;
+}
+
+/*Fin del footer*/

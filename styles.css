@@ -1,37 +1,80 @@
+/* RESET GENERAL */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-.container {
-  background-color: beige;
+
+/* ESTILO GENERAL DEL BODY */
+body {
+  background-color: rgb(255, 255, 220);
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  height: 100vh;
+  font-weight: 900;
+}
+
+/* HEADER */
+#primero {
   display: grid;
   place-items: center;
-  min-height: 100vh;
+  background-color: rgb(163, 163, 163);
+  padding: 1rem 0;
 }
 
-.calculadoraCuerpo {
-    background-color: rgb(0, 0, 0);
-    color: antiquewhite;
-    display: grid;
-    grid-template-columns: repeat(4,1fr);
-    gap: .5rem;
-    width: 350px;
-    max-width: 100%;
-    padding: 1.5rem;
-    border-radius: 1rem;
-    aspect-ratio: 1/1;
+/* Navegación */
+header .nav-link {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
 }
-.displayCalculadora{
-    color: antiquewhite;
-    grid-column: 1/5;
-    padding: 3rem;
-    font-size: xxx-large;
-    font-weight: 700;
-    border-radius: 10px;
-} 
 
-.btn{
+header .nav-link li {
+  list-style: none;
+}
+
+header .nav-link a {
+  font-size: xx-large;
+  color: #ffffff;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+header .nav-link li:hover {
+  transform: scale(0.95);
+}
+
+header .nav-link a:hover {
+  color: #000000;
+}
+
+/* MAIN - CALCULADORA */
+
+#segundo {
+  background-color: rgb(0, 0, 0);
+  color: antiquewhite;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.5rem;
+  width: 350px;
+  max-width: 100%;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  aspect-ratio: 1/1;
+  margin: auto  ;
+}
+
+.displayCalculadora {
+  color: antiquewhite;
+  grid-column: 1/5;
+  padding: 3rem;
+  font-size: xxx-large;
+  font-weight: 700;
+  border-radius: 10px;
+}
+
+/* BOTONES */
+.btn {
   border: none;
   background-color: rgb(53, 53, 53);
   color: antiquewhite;
@@ -39,49 +82,65 @@
   font-size: x-large;
   font-weight: 500;
   cursor: pointer;
-  transition:  0,3 ease;
-  transform: 0,3s ease;
-  padding: 1.5rem .5rem;
+  transition: 0.3s ease;
+  transform: scale(1);
+  padding: 1.5rem 0.5rem;
 }
-.btn:hover{
+
+.btn:hover {
   background-color: gray;
   transform: scale(0.95);
 }
 
-#botonLimpiar{
+#botonLimpiar {
   grid-area: 2/1/3/3;
   border-radius: 50px;
 }
-#botonEliminar{
+
+#botonEliminar {
   grid-column: 3/4;
 }
 
-#btnDividir, #btnMultiplicar, #btnRestar, #btnSumar, #btnIgual{
+#btnDividir,
+#btnMultiplicar,
+#btnRestar,
+#btnSumar,
+#btnIgual {
   grid-column: 4/5;
   background-color: rgb(224, 122, 5);
-  transform: scale(0.95);
 }
+
 #btnDividir:hover,
 #btnMultiplicar:hover,
 #btnRestar:hover,
 #btnSumar:hover,
-#btnIgual:hover{
+#btnIgual:hover {
   background-color: rgba(255, 184, 78, 0.959);
+}
 
-}
-#btnSiete, #btnOcho, #btnNueve{
-  grid-row: 3/4;
-}
-#btnCuatro, #btnCinco, #btnSeis{
-  grid-row: 4/5;
-}
-#btnUno, #btnDos, #btnTres{
-  grid-row: 5/6;
-}
-#btnComa{
+#btnSiete, #btnOcho, #btnNueve { grid-row: 3/4; }
+#btnCuatro, #btnCinco, #btnSeis { grid-row: 4/5; }
+#btnUno, #btnDos, #btnTres { grid-row: 5/6; }
+
+#btnComa {
   grid-area: 6/1/7/2;
 }
-#btnCero{
+
+#btnCero {
   grid-area: 6/2/7/4;
   border-radius: 50px;
+}
+
+/* FOOTER */
+#tercero {
+  display: grid;
+  place-content: center;
+  background-color: rgb(0, 48, 87);
+  padding: 1rem;
+}
+
+.footer-content {
+  color: white;
+  text-align: center;
+  font-weight: bold;
 }
